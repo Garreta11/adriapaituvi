@@ -1,0 +1,60 @@
+@import '../../sass/variables.scss';
+
+.header {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+
+    padding: 24px 60px;
+    font-size: 12px;
+
+    position: absolute;
+    top: 0;
+
+    color: $color-white;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    a {
+        color: $color-white;
+        pointer-events: all;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        p {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            &::before {
+                content: "";
+                display: block;
+                width: 7px;
+                height: 7px;
+                background-color: $color-white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__phones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+}

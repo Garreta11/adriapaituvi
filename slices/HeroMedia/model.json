@@ -1,0 +1,27 @@
+{
+  "id": "hero_media",
+  "type": "SharedSlice",
+  "name": "HeroMedia",
+  "description": "HeroMedia",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero": {
+          "type": "Link",
+          "config": {
+            "label": "Hero",
+            "placeholder": "",
+            "select": "media"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

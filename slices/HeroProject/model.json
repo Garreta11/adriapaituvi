@@ -1,0 +1,27 @@
+{
+  "id": "hero_project",
+  "type": "SharedSlice",
+  "name": "HeroProject",
+  "description": "HeroProject",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero": {
+          "type": "Link",
+          "config": {
+            "label": "Hero",
+            "placeholder": "",
+            "select": "media"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

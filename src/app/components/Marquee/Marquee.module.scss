@@ -1,0 +1,38 @@
+.marquee {
+    &__cities {
+        padding: 150px 0px;
+        /* display: flex;
+        justify-content: space-between; */
+
+        white-space: nowrap;
+        /* overflow: hidden; */
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        animation: marquee 10s linear infinite;
+
+        &__city {
+            font-size: 208px;
+            font-weight: 800;
+            line-height: 219.158px;
+            letter-spacing: 6.24px;
+            -webkit-text-stroke: 5px #000;
+            color: transparent;
+
+            display: inline-block;
+            /* padding-right: 10px; */
+            /* Adjust as needed */
+
+            &__current {
+                color: #000;
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-100%);
+    }
+}

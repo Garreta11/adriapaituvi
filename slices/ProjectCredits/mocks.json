@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "for",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "make",
+				"type": "Text"
+			},
+			"credits": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut nisi culpa exercitation ipsum excepteur qui. Irure pariatur duis veniam quis fugiat tempor nostrud eu cillum. Fugiat do sint deserunt dolore irure reprehenderit excepteur anim."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

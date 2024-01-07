@@ -1,0 +1,64 @@
+@import './sass/variables.scss';
+@import './sass/typography.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Fraktion Mono';
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  
+  /* &.--no-scroll {
+    overflow-y: hidden;
+  } */
+
+
+}
+
+body {
+  color: $color-black;
+  background: $color-white;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    // color-scheme: dark;
+  }
+}
+
+/*
+ * Scrollbar
+ */
+ /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-black; 
+}
+
+
+/*
+ * import modules styles
+ */
+/* @import './sass/Header.scss';
+@import './sass/Footer.scss'; */

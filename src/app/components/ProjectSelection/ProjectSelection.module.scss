@@ -1,0 +1,45 @@
+.projectselection {
+
+    margin: 200px 0px;
+    margin-bottom: 0px;
+
+    &__headline {
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 560;
+        line-height: normal;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+
+    &__project {
+        text-align: center;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -1.26px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        padding: 80px 0px;
+    }
+
+    &__video {
+        pointer-events: none;
+        opacity: 0;
+        position: fixed;
+        object-fit: cover;
+        width: 300px;
+        height: 500px;
+
+        transition: opacity ease 1s;
+
+        &__show {
+            opacity: 1;
+        }
+    }
+
+}

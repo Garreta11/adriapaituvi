@@ -1,0 +1,94 @@
+{
+  "id": "information",
+  "label": "Information",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "job_position": {
+        "type": "Text",
+        "config": {
+          "label": "Job Position",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "phones": {
+        "type": "Group",
+        "config": {
+          "label": "Phones",
+          "fields": {
+            "prefix": {
+              "type": "Text",
+              "config": {
+                "label": "Prefix",
+                "placeholder": ""
+              }
+            },
+            "phone": {
+              "type": "Text",
+              "config": {
+                "label": "Phone",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "linkedin": {
+        "type": "Link",
+        "config": {
+          "label": "Linkedin",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagram": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "cities": {
+        "type": "Group",
+        "config": {
+          "label": "Cities",
+          "fields": {
+            "city": {
+              "type": "Text",
+              "config": {
+                "label": "City",
+                "placeholder": ""
+              }
+            },
+            "current_city": {
+              "type": "Boolean",
+              "config": {
+                "label": "Current City",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            }
+          }
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Copyright",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
