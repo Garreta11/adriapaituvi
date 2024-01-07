@@ -34,10 +34,10 @@ const Header = async () => {
                 </div>
 
                 <div className={styles.header__links}>
-                    <div className={styles.footer__links__menu}>
+                    <div className={styles.header__links__menu}>
                         {menu.data.menu.map((item, index) => {
                             return (
-                                <Link key={index} href={item.item.url}>{item.item.uid}</Link>
+                                <Link key={index} href={item.item.url} className={styles.header__links__menu__item}>{item.item.uid}</Link>
                             )
                         })}
                     </div>
@@ -49,6 +49,7 @@ const Header = async () => {
 
                 <div className={styles.header__social}>
                     <Link href={information.data.linkedin.url} target='_blank'>Linkedin</Link>
+                    <span> / </span>
                     <Link href={information.data.instagram.url} target='_blank'>Instagram</Link>
                 </div>
 

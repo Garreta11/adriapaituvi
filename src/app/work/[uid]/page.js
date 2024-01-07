@@ -21,17 +21,17 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-    const client = createClient();
-    const page = await client
-        .getByUID("work", params.uid)
-        .catch(() => notFound());
+  const client = createClient();
+  const page = await client
+    .getByUID("work", params.uid)
+    .catch(() => notFound());
 
-    return (
-        <>
-            <SliceZone slices={page.data.slices} components={components} />
-            <ProjectSelection />
-        </>
-    );
+  return (
+    <>
+      <SliceZone slices={page.data.slices} components={components} />
+      <ProjectSelection />
+    </>
+  );
 }
 
 export async function generateStaticParams() {

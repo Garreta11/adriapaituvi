@@ -57,4 +57,15 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__links {
+        &__menu {
+            &__item {
+                padding-right: 80px;
+                &:last-of-type {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
 }

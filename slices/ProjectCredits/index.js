@@ -5,6 +5,7 @@
  */
 
 import styles from './ProjectCredits.module.scss'
+import { PrismicRichText } from '@prismicio/react'
 
 const ProjectCredits = ({ slice }) => {
   return (
@@ -18,9 +19,11 @@ const ProjectCredits = ({ slice }) => {
       <h3 className={styles.credits__title}>{slice.primary.title}</h3>
 
       <p className={styles.credits__description}>{slice.primary.description}</p>
+      
+      <div className={styles.credits__credits}>
+        <PrismicRichText field={slice.primary.credits} />
+      </div>
 
-      <div className={styles.credits__credits}>{slice.primary.credits[0].text}</div>
-    
     </section>
   );
 };
