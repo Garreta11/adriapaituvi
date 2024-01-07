@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "FieldContent",
+				"value": "cowboy",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco mollit pariatur aliquip cillum occaecat dolore laboris ad ullamco mollit aliquip deserunt commodo duis consequat. Amet sit quis labore reprehenderit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -9,6 +9,7 @@
 import styles from "./HeroProject.module.scss"
 import { useThemeContext } from '@/app/components/Theme/Theme';
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const transition = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };
 

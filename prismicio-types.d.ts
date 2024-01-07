@@ -276,7 +276,10 @@ export type MainMenuDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = DescriptionSlice;
+type PageDocumentDataSlicesSlice =
+  | ImageSlice
+  | TeaserTextSlice
+  | DescriptionSlice;
 
 /**
  * Content for Page documents
@@ -612,6 +615,48 @@ export type HeroProjectSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Image → Primary*
+ */
+export interface ImageSliceDefaultPrimary {
+  /**
+   * Image field in *Image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Image Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Image*
+ */
+type ImageSliceVariation = ImageSliceDefault;
+
+/**
+ * Image Shared Slice
+ *
+ * - **API ID**: `image`
+ * - **Description**: Image
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
  * Primary content in *ProjectCredits → Primary*
  */
 export interface ProjectCreditsSliceDefaultPrimary {
@@ -676,6 +721,61 @@ export type ProjectCreditsSlice = prismic.SharedSlice<
   ProjectCreditsSliceVariation
 >;
 
+/**
+ * Primary content in *TeaserText → Primary*
+ */
+export interface TeaserTextSliceDefaultPrimary {
+  /**
+   * Headline field in *TeaserText → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: teaser_text.primary.headline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  headline: prismic.KeyTextField;
+
+  /**
+   * Text field in *TeaserText → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: teaser_text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TeaserText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeaserTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TeaserTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TeaserText*
+ */
+type TeaserTextSliceVariation = TeaserTextSliceDefault;
+
+/**
+ * TeaserText Shared Slice
+ *
+ * - **API ID**: `teaser_text`
+ * - **Description**: TeaserText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeaserTextSlice = prismic.SharedSlice<
+  "teaser_text",
+  TeaserTextSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -719,10 +819,18 @@ declare module "@prismicio/client" {
       HeroProjectSliceDefaultPrimary,
       HeroProjectSliceVariation,
       HeroProjectSliceDefault,
+      ImageSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceVariation,
+      ImageSliceDefault,
       ProjectCreditsSlice,
       ProjectCreditsSliceDefaultPrimary,
       ProjectCreditsSliceVariation,
       ProjectCreditsSliceDefault,
+      TeaserTextSlice,
+      TeaserTextSliceDefaultPrimary,
+      TeaserTextSliceVariation,
+      TeaserTextSliceDefault,
     };
   }
 }

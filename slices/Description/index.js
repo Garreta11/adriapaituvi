@@ -5,6 +5,7 @@
  */
 
 import styles from './Description.module.scss'
+import { PrismicRichText } from '@prismicio/react'
 
 const Description = ({ slice }) => {
   return (
@@ -13,7 +14,10 @@ const Description = ({ slice }) => {
       data-slice-variation={slice.variation}
       className={styles.description}
     >      
-      <p>{slice.primary.description[0].text}</p>
+      {/* <p>{slice.primary.description[0].text}</p> */}
+
+      <PrismicRichText field={slice.primary.description} />
+
 
     </section>
   );

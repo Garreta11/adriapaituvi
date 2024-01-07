@@ -1,0 +1,27 @@
+.teaser_text {
+
+    width: 59.7%;
+
+    padding: 0px 60px;
+
+    margin-bottom: 48px;
+
+    &__headline {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+
+}
