@@ -14,7 +14,7 @@ const Marquee = ({ cities }) => {
                                 className={`${styles.marquee__cities__city} ${city.current_city ? styles.marquee__cities__city__current : ''}`}
                                 key={index}
                             >
-                                {city.city}/
+                                {city.city}<span className={styles.marquee__cities__city__line}>/</span>
                             </span>
                         )
                     })}
@@ -26,7 +26,7 @@ const Marquee = ({ cities }) => {
                                 className={`${styles.marquee__cities__city} ${city.current_city ? styles.marquee__cities__city__current : ''}`}
                                 key={index}
                             >
-                                {city.city}/
+                                {city.city}<span className={styles.marquee__cities__city__line}>/</span>
                             </span>
                         )
                     })}

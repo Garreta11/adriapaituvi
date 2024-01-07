@@ -10,17 +10,17 @@
     &__cities {
         display: inline-block;
         margin-top: 5px;
-        animation: marquee 20s linear infinite;
+        animation: marquee 80s linear infinite;
 
         &__1 {
             position: relative;
             left: 0%;
-            animation: swap 20s linear infinite;
+            animation: swap 80s linear infinite;
         }
 
         &__city {
             display: inline-block;
-            padding: 0 10rem;
+            /* padding: 0 10rem; */
 
             font-size: 208px;
             font-weight: 800;
@@ -31,6 +31,10 @@
 
             &__current {
                 color: black;
+            }
+
+            &__line {
+                color: #000;
             }
         }
 
