@@ -11,6 +11,7 @@ const Header = async () => {
     return (
         <div className={styles.header}>
             {/* <pre>{JSON.stringify(information.data, undefined, 2)}</pre> */}
+            
 
             <div className={styles.header__top}>
                 <div className={styles.header__logo}>
